@@ -1,1 +1,57 @@
-<h1> Welcome to my address book</h1>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>My Address Book</title>
+        <link href="/css/address.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="wrap">
+	<div id="header"><h1>My Address Book</h1></div>
+      
+	<div id="main">
+	  <table id="address-list" border="1" width="100%" rules="rows" align="center">
+            <tr>
+              <th>Name</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+              <td >row 1, cell 1</td>
+              <td align="center">row 1, cell 2</td>
+            </tr>
+          </table>
+	</div>
+	<div id="sidebar">
+          <form id="formID" class="formular" method="post" action="">
+	    <fieldset class="login">
+	      <legend>New Address</legend>
+	      <div>
+		<label for="name">Name</label> <input type="text" id="name" name="name">
+	      </div>
+              <div>
+		<label for="street1">Street1</label> <input type="text" id="street1" name="street1">
+	      </div>
+               <div>
+		<label for="street2">Street2</label> <input type="text" id="street2" name="street2">
+	      </div>
+              <div>
+		<label for="city">City</label> <input type="text" id="city" name="city">
+	      </div>
+              <div>
+		<label for="country">Country</label> <input type="text" id="country" name="country">
+	      </div>
+               <div>
+		<label for="zipcode">ZipCode</label> <input type="text" id="zipcode" name="zipcode">
+	      </div>
+	  
+              <input class="submit" type="submit" value="Create"/>
+	    </fieldset>
+          </form>
+	</div>
+	<div id="footer">
+	  <p><a href="TechbehindTech.com">TechBehindTech</a> -- Siva Jagadeesan</p>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+body,html {
+    margin:0;
+    padding:0;
+    color:#000;
+    background:#a7a09a;
+}
+#wrap {
+    width:970px;
+    margin:0 auto;
+    background: #fffeff;
+}
+#header {
+    padding:5px 10px;
+    background: #054477;
+	text-align: right;
+	color: #fffeff;
+}
+h1 {
+    margin:0;
+}
+#main {
+    float:left;
+    width:580px;
+    padding:10px;
+	background-color: #fffeff;
+}
+h2 {
+    margin:0 0 1em;
+	background-color: #fffeff;
+}
+#sidebar {
+    float:right;
+    width:350px;
+    padding:10px;
+    background-color: #fffeff;
+}
+#footer {
+    clear:both;
+    padding:5px 10px;
+    background: #fed47f;
+}
+#footer p {
+    margin:0;
+}
+* html #footer {
+    height:1px;
+}
+
+
+form * {margin:0;padding:0;} /* Standard margin and padding reset, normally done on the body */
+
+legend {
+	color:#000; /* IE styles legends with blue text by default */
+	*margin-left:-7px;
+	font-weight: bold;
+	font-size: 20px;
+}
+fieldset {
+	border:1px solid #dedede; /* Default fieldset borders vary cross browser, so make them the same */
+}
+fieldset div {
+	overflow:hidden; /* Contain the floating elements */
+	display:inline-block;
+	padding: 10px;
+}
+fieldset div {display:block;} /* Reset element back to block leaving layout in ie */
+label {
+	float:left; /* Take out of flow so the input starts at the same height */
+	width:8em; /* Set a width so the inputs line up */
+}
