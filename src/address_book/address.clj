@@ -7,7 +7,7 @@
 (defn create [attrs]
   (let [id (random-number)
         new-attrs (merge {:id id} attrs)]
-    (swap! STORE assoc id new-attrs)
+    (swap! STORE merge {id new-attrs})
     new-attrs))
 
 (defn find-all []
