@@ -1,6 +1,5 @@
 (ns address_book.routes
-  (:use [compojure.core]
-        [ring.middleware.json-params])
+  (:use [compojure.core])
   (:require [address-book.address :as address]
             [compojure.route :as route]
             [clj-json.core :as json]))
@@ -13,14 +12,10 @@
 (defroutes handler
   (GET "/addresses" [] (json-response (address/find-all)))
   (GET "/addresses/:id" [id] (json-response (address/find id)))
-  (POST "/addresses" [attrs]  (json-response (address/create attrs)))
-  (PUT "/addresses/:id" [id attrs]  (json-response (address/update id attrs)))
-  (DELETE "/addresses/:id" [id]  (json-response (address/delete id)))
+  (POST "/addresses" params  (json-response (address/create (:params params))))
 
   (route/files "/" {:root "public"})
   (route/not-found "Page not found")) 
 
-
 (def address-book
-     (-> handler
-         wrap-json-params))
+     handler)

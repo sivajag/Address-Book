@@ -16,6 +16,14 @@
 	<div id="header"><h1>My Address Book</h1></div>
       
 	<div id="main">
+          <table id="address">
+            <tr><td>Name</td><td id="name"/></tr>
+            <tr><td>Street1</td><td id="street1"/></tr>
+            <tr><td>Street2</td><td id="street2"/></tr>
+            <tr><td>City</td><td id="city"/></tr>
+            <tr><td>Country</td><td id="country"/></tr>
+            <tr><td>ZipCode</td><td id="zipcode"/></tr>
+          </table>
 	  <table id="address-list" border="1" width="100%" rules="rows" align="center">
             <tr>
               <th>Name</th>
@@ -28,7 +36,7 @@
           </table>
 	</div>
 	<div id="sidebar">
-          <form id="formID" class="formular" method="post" action="">
+          <form id="address-form" class="formular" method="post" action="/addresses">
 	    <fieldset class="login">
 	      <legend>New Address</legend>
 	      <div>

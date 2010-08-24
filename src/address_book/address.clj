@@ -2,7 +2,7 @@
   (:use [address-book.utils number])
   (:refer-clojure :exclude (find create)))
 
-(def STORE (atom {:1 {:id :1 :name "siva" :street1 "88 17th " :street2 "#203"}}))
+(def STORE (atom {:1 {:id :1 :name "Siva Jagadeesan" :street1 "88 7th" :street2 "#203" :city "Cupertino" :country "USA" :zipcode 98802}}))
 
 (defn create [attrs]
   (let [id (random-number)
