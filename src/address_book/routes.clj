@@ -12,7 +12,7 @@
 (defroutes handler
   (GET "/addresses" [] (json-response (address/find-all)))
   (GET "/addresses/:id" [id] (json-response (address/find id)))
-  (POST "/addresses" params  (json-response (address/create (:params params))))
+  (POST "/addresses" {params :params}  (json-response (address/create params)))
 
   (route/files "/" {:root "public"})
   (route/not-found "Page not found")) 

@@ -43,8 +43,3 @@ $.fn.showAddress = function(json){
 };
 
 
-//$.post("test.php", { "func": "getNameAndTime" },
-//   function(data){
-//     alert(data.name); // John
-//     console.log(data.time); //  2pm
-//   }, "json");
