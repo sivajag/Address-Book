@@ -1,6 +1,7 @@
 (ns address_book.routes
   (:use [compojure.core])
   (:require [address-book.address :as address]
+            [address-book.middleware :as mdw]
             [compojure.route :as route]
             [clj-json.core :as json]))
 
@@ -18,4 +19,5 @@
   (route/not-found "Page not found")) 
 
 (def address-book
-     handler)
+     (-> handler
+         mdw/wrap-request-logging))
