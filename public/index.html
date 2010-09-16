@@ -5,8 +5,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>My Address Book</title>
         <link href="/css/address.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="/css/ui-lightness/jquery-ui-1.8.4.custom.css" media="screen" rel="stylesheet" type="text/css" />
         <script src="/js/jquery-1.4.2.min.js" type="text/javascript"></script>
-        <script src="/js/jquery-ui-1.8.1.custom.min.js" type="text/javascript"></script>
+        <script src="/js/jquery-ui-1.8.4.custom.min.js" type="text/javascript"></script>
         <script src="/js/jquery.form.js" type="text/javascript"></script>
         <script src="/js/address_book.js" type="text/javascript"></script>
         <script src="/js/address_list.js" type="text/javascript"></script>
@@ -62,6 +63,33 @@
 	    </fieldset>
           </form>
 	</div>
+        <div id="edit-dialog" >
+          <form id="edit-address-form" class="formular" method="put" action="/addresses">
+	    <fieldset class="login">
+	      <legend>Edit Address</legend>
+	      <div>
+		<label for="name">Name</label> <input type="text" id="name" name="name">
+	      </div>
+              <div>
+		<label for="street1">Street1</label> <input type="text" id="street1" name="street1">
+	      </div>
+               <div>
+		<label for="street2">Street2</label> <input type="text" id="street2" name="street2">
+	      </div>
+              <div>
+		<label for="city">City</label> <input type="text" id="city" name="city">
+	      </div>
+              <div>
+		<label for="country">Country</label> <input type="text" id="country" name="country">
+	      </div>
+               <div>
+		<label for="zipcode">ZipCode</label> <input type="text" id="zipcode" name="zipcode">
+	      </div>
+	  
+              <input class="submit" type="submit" value="Update"/>
+	    </fieldset>
+          </form>
+        </div>
 	<div id="footer">
 	  <p><a href="TechbehindTech.com">TechBehindTech</a> -- Siva Jagadeesan</p>
 	</div>

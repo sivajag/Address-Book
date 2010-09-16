@@ -13,6 +13,7 @@
 (defroutes handler
   (GET "/addresses" [] (json-response (address/find-all)))
   (GET "/addresses/:id" [id] (json-response (address/find id)))
+  (PUT "/addresses/:id" [id {params :params}] (json-response (address/update id params)))
   (POST "/addresses" {params :params}  (json-response (address/create params)))
 
   (route/files "/" {:root "public"})

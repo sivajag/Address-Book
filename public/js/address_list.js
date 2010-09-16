@@ -2,9 +2,9 @@
 /*global alert, window,$ */
 
 function action_links(data){
-    var link = "<a href=\"\">edit</a> ";
+    var link = "<a class=\"address-edit-link\" href=\"addresses/"+ data.id +"\" >Edit</a>";
     link += " | <a href=\"\">delete</a>";
-    return "edit | delete";
+    return link;
 }
 
 $.fn.showAddressList = function(){
@@ -18,6 +18,10 @@ $.fn.showAddressList = function(){
         });
     });
 };
+
+function editAddress(id){
+    
+}
 
 $.fn.addAddress = function(json){
     var data = json;
@@ -33,6 +37,20 @@ $.fn.showAddress = function(json){
     var that = this;
     return this.each(function(){
         $(that).slideDown('slow');
+        $(that).find("#name").html(data.name); 
+        $(that).find("#street1").html(data.street1); 
+        $(that).find("#street2").html(data.street2); 
+        $(that).find("#city").html(data.city); 
+        $(that).find("#country").html(data.country); 
+        $(that).find("#zipcode").html(data.zipcode); 
+    });
+};
+
+$.fn.editAddress = function(json){
+    var data = json;
+    var that = this;
+    return this.each(function(){
+        $("#edit-dialog").dialog();
         $(that).find("#name").html(data.name); 
         $(that).find("#street1").html(data.street1); 
         $(that).find("#street2").html(data.street2); 

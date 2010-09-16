@@ -3,11 +3,19 @@
 
 $(document).ready(function() {
     $("#address").hide();
+    $("#edit-dialog").hide();
     $("#address-list").showAddressList();
 
     $(".address-link").live("click",function(e){
         $.getJSON($(this).attr("href"), function(json) {
             $("#address").showAddress(json);
+        });
+        e.preventDefault();
+    });
+
+    $(".address-edit-link").live("click",function(e){
+        $.getJSON($(this).attr("href"), function(json) {
+            $("#address-form").editAddress(json);
         });
         e.preventDefault();
     });
