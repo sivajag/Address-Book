@@ -15,7 +15,7 @@ $(document).ready(function() {
 
     $(".address-edit-link").live("click",function(e){
         $.getJSON($(this).attr("href"), function(json) {
-            $("#address-form").editAddress(json);
+            $("#edit-address-form").editAddress(json);
         });
         e.preventDefault();
     });

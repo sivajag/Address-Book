@@ -19,10 +19,6 @@ $.fn.showAddressList = function(){
     });
 };
 
-function editAddress(id){
-    
-}
-
 $.fn.addAddress = function(json){
     var data = json;
     var that = this;
@@ -51,12 +47,12 @@ $.fn.editAddress = function(json){
     var that = this;
     return this.each(function(){
         $("#edit-dialog").dialog();
-        $(that).find("#name").html(data.name); 
-        $(that).find("#street1").html(data.street1); 
-        $(that).find("#street2").html(data.street2); 
-        $(that).find("#city").html(data.city); 
-        $(that).find("#country").html(data.country); 
-        $(that).find("#zipcode").html(data.zipcode); 
+        $(that).find("#name").val(data.name); 
+        $(that).find("#street1").val(data.street1); 
+        $(that).find("#street2").val(data.street2); 
+        $(that).find("#city").val(data.city); 
+        $(that).find("#country").val(data.country); 
+        $(that).find("#zipcode").val(data.zipcode); 
     });
 };
 
