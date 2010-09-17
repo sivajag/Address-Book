@@ -3,7 +3,7 @@
 
 function action_links(data){
     var link = "<a class=\"address-edit-link\" href=\"addresses/"+ data.id +"\" >Edit</a>";
-    link += " | <a href=\"\">delete</a>";
+    link += " | <a class=\"address-delete-link\" href=\"addresses/"+ data.id +"\" >Delete</a>";
     return link;
 }
 

@@ -20,6 +20,22 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $(".address-delete-link").live("click",function(e){
+        var $this = $(this);
+        var url = $this.attr('href');
+        var callback = function(data){
+            $("#address-list").showAddressList();
+        };
+         var options = { 
+            success:   callback,
+            url: url,
+            type:     "DELETE",
+            dataType: "json"
+        }; 
+        $(this).ajaxSubmit(options); 
+        e.preventDefault();
+    });
+
     $('#address-form').submit(function(event){
         event.preventDefault();
         var $this = $(this);
@@ -58,3 +74,18 @@ $(document).ready(function() {
     }); 
 
 });
+
+
+function ajaxRequest(url, data, callback, type, method) {
+    if (jQuery.isFunction(data)) {
+        callback = data;
+        data = {};
+    }
+    return jQuery.ajax({
+        type: method,
+        url: url,
+        data: data,
+        success: callback,
+        dataType: type
+        });
+}

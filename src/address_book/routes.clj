@@ -15,6 +15,7 @@
   (GET "/addresses/:id" [id] (json-response (address/find id)))
   (POST "/addresses" {params :params}  (json-response (address/create params)))
   (PUT "/addresses/:id" {params :params} (json-response (address/update (params "id")  params)))
+  (DELETE "/addresses/:id" [id] (json-response (address/delete id )))
 
   (route/files "/" {:root "public"})
   (route/not-found "Page not found")) 

@@ -23,6 +23,6 @@
 
 (defn delete [id]
   (let [old-attrs (find id)]
-    (swap! STORE dissoc id)
+    (swap! STORE dissoc (to-keyword id))
     old-attrs))
 
