@@ -75,17 +75,3 @@ $(document).ready(function() {
 
 });
 
-
-function ajaxRequest(url, data, callback, type, method) {
-    if (jQuery.isFunction(data)) {
-        callback = data;
-        data = {};
-    }
-    return jQuery.ajax({
-        type: method,
-        url: url,
-        data: data,
-        success: callback,
-        dataType: type
-        });
-}
