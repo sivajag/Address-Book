@@ -38,4 +38,23 @@ $(document).ready(function() {
         $(this).ajaxSubmit(options); 
     }); 
 
+    $("#edit-address-form").live("submit",function(event){
+        event.preventDefault();
+        var $this = $(this);
+        var url = $this.attr('action');
+        var dataToSend = $this.serialize();
+        var callback = function(data){
+            $("#edit-dialog").dialog('close');
+            $("#address-list").showAddressList();
+        };
+        var options = { 
+            success:   callback,
+            url: url,
+            type:     "PUT",
+            dataType: "json",
+            clearForm: true     
+        }; 
+        $(this).ajaxSubmit(options); 
+    }); 
+
 });

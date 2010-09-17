@@ -47,6 +47,7 @@ $.fn.editAddress = function(json){
     var that = this;
     return this.each(function(){
         $("#edit-dialog").dialog();
+        $("#edit-address-form").attr('action', "/addresses/" + data.id);
         $(that).find("#name").val(data.name); 
         $(that).find("#street1").val(data.street1); 
         $(that).find("#street2").val(data.street2); 
